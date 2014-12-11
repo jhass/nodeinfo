@@ -1,3 +1,4 @@
 language: ruby
 sudo: false
+gemfile: 'tests/Gemfile'
 script: "cd tests && bundle exec rake"
