@@ -1,0 +1,3 @@
+language: ruby
+sudo: false
+script: "cd tests && bundle exec rake"

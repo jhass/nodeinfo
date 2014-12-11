@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://nodeinfo.diaspora.software/ns/schema/1.0#",
+  "description": "NodeInfo schema version 1.0.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "software",
+    "openRegistrations"
+
+  ],
+  "properties": {
+    "version": {
+      "description": "The schema version, must be 1.0.",
+      "enum": [
+        "1.0"
+      ]
+    },
+    "software": {
+      "description": "Metadata about server software in use.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "version"
+      ],
+      "properties": {
+        "name": {
+          "description": "The canonical name of this server software.",
+          "enum": [
+            "diaspora"
+          ]
+        },
+        "version": {
+          "description": "The version of this server software.",
+          "type": "string"
+        }
+      }
+    },
+    "protocols": {
+      "description": "The protocols supported on this server.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "inbound",
+        "outbound"
+      ],
+      "properties": {
+        "inbound": {
+          "description": "The protocols this server can receive traffic for.",
+          "type": "array",
+          "items": {
+            "enum": [
+              "diaspora",
+              "friendica",
+              "gnusocial",
+              "mediagoblin",
+              "pumpio",
+              "redmatrix"
+            ]
+          }
+        },
+        "outbound": {
+          "description": "The protocols this server can generate traffic for.",
+          "type": "array",
+          "items": {
+            "enum": [
+              "diaspora",
+              "friendica",
+              "gnusocial",
+              "mediagoblin",
+              "pumpio",
+              "redmatrix"
+            ]
+          }
+        }
+      }
+    },
+    "services": {
+      "description": "The third party sites this servers allows to publish messages to.",
+      "type": "array",
+      "items": {
+        "enum": [
+          "diaspora",
+          "facebook",
+          "tumblr",
+          "twitter",
+          "wordpress"
+        ]
+      }
+    },
+    "openRegistrations": {
+      "description": "Whether this server allows open self-registration.",
+      "type": "boolean"
+    },
+    "usage": {
+      "description": "Usage statistics for this server.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "users": {
+          "description": "statistics about the users of this server.",
+          "additionalProperties": false,
+          "properties": {
+            "total": {
+              "description": "The total amount of on this server registered users.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "activeHalfyear": {
+              "description": "The amount of users that signed in at least once in the last 180 days.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "activeMonth": {
+              "description": "The amount of users that signed in at least once in the last 30 days.",
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "localPosts": {
+          "description": "The amount of posts that were made by users that are registered on this server.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "localComments": {
+          "description": "The amount of comments that were made by users that are registered on this server.",
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

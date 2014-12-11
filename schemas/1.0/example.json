@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "software": {
+    "name": "diaspora",
+    "version": "0.5.0"
+  },
+  "protocols": {
+    "inbound": ["diaspora"],
+    "outbound": ["diaspora"]
+  },
+  "services": ["facebook", "twitter"],
+  "openRegistrations": true,
+  "usage": {
+    "users": {
+      "total": 123,
+      "activeHalfyear": 42,
+      "activeMonth": 23
+    },
+    "localPosts": 500,
+    "localComments": 1000
+  }
+}
