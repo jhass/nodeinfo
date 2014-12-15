@@ -23,7 +23,7 @@ elements.
 
 Currently the following relations are known:
 
-* `http://nodeinfo.diaspora.software/ns/1.0`. Referencing a JSON document
+* `http://nodeinfo.diaspora.software/ns/schema/1.0`. Referencing a JSON document
   following the NodeInfo schema 1.0.
 
 A client should first try the HTTPS protocol and fall back to HTTP on
@@ -53,7 +53,7 @@ contents:
  {
     "links": [
         {
-            "rel": "http://nodeinfo.diaspora.software/ns/1.0",
+            "rel": "http://nodeinfo.diaspora.software/ns/schema/1.0",
             "href": "https://example.org/nodeinfo/1.0"
         }
     ]
@@ -68,7 +68,7 @@ Accept header to the `application/json` media type.
 
 A server must provide the data at least in this media type. A server should
 set a Content-Type of
-`application/json; profile=http://nodeinfo.diaspora.software/ns/1.0#`,
+`application/json; profile=http://nodeinfo.diaspora.software/ns/schema/1.0#`,
 where the value of profile matches the resolution scope of the NodeInfo
 schema version that's being returned.
 

@@ -29,7 +29,9 @@
         "name": {
           "description": "The canonical name of this server software.",
           "enum": [
-            "diaspora"
+            "diaspora",
+            "friendica",
+            "redmatrix"
           ]
         },
         "version": {
