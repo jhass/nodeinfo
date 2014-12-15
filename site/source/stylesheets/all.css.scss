@@ -1,0 +1,22 @@
+@import "semantic-ui";
+@import "rouge";
+
+body {
+  margin: 0;
+}
+
+#nav {
+  border-radius: 0;
+}
+
+#main {
+  width: 80%;
+  margin: 0 auto 5em;
+}
+
+
+.index {
+  h1 {
+    display: none;
+  }
+}

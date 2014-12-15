@@ -1,0 +1,33 @@
+require 'bundler/setup'
+
+task "source/docson" do
+  sh "git submodule init"
+  sh "git submodule update"
+end
+
+directory "source/ns/schema"
+rule(%r{^source/ns/schema/} => [proc{|source| "../schemas/#{source.split('/').last}/schema.json" }, "source/ns/schema"]) do |t|
+  cp t.source, t.name
+end
+
+task :install_schemas => %w(source/ns/schema/1.0)
+
+file "source/protocol.md" => "../PROTOCOL.md" do |t|
+  cp t.source, t.name
+end
+
+file "source/index.md" => "../README.md" do |t|
+  source = File.read t.source
+  source.sub!("PROTOCOL.md", "protocol.html")
+  File.write t.name, source
+end
+
+task :build => %w(source/index.md source/protocol.md install_schemas source/docson) do
+  sh "bundle exec middleman build"
+end
+
+task :deploy => :build do
+  sh "bundle exec middleman deploy"
+end
+
+task :default => :build
