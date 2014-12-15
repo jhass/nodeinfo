@@ -9,7 +9,7 @@ the best fitting software and server for their needs.
 
 ## Protocol
 
-Please see the [protocol definitionn](PROTOCOL.md).
+Please see the [protocol definition](PROTOCOL.md).
 
 ## Support
 
