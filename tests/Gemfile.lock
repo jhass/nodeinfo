@@ -1,10 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.3.8)
     diff-lcs (1.2.5)
-    json-schema (2.2.5)
-    json-schema-rspec (0.0.1)
-      json-schema (~> 2.2.2)
+    json-schema (2.5.1)
+      addressable (~> 2.3.7)
+    json-schema-rspec (0.0.2)
+      json-schema (~> 2.5)
       rspec
     rake (10.4.2)
     rspec (3.2.0)
