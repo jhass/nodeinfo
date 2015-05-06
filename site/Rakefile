@@ -22,10 +22,20 @@ file "source/index.md" => "../README.md" do |t|
   File.write t.name, source
 end
 
-task :build => %w(source/index.md source/protocol.md install_schemas source/docson) do
+task :prepare => %w(source/index.md source/protocol.md install_schemas source/docson)
+
+
+desc "Build site locally"
+task :build => :prepare do
   sh "bundle exec middleman build"
 end
 
+desc "Start development server"
+task :serve => :prepare do
+  sh "bundle exec middleman"
+end
+
+desc "Build and deploy site"
 task :deploy => :build do
   sh "bundle exec middleman deploy"
 end
