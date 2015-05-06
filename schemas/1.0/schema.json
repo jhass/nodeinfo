@@ -103,6 +103,7 @@
       "properties": {
         "users": {
           "description": "statistics about the users of this server.",
+          "type": "object",
           "additionalProperties": false,
           "properties": {
             "total": {
