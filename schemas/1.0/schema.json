@@ -7,8 +7,9 @@
   "required": [
     "version",
     "software",
-    "openRegistrations"
-
+    "protocols",
+    "openRegistrations",
+    "usage"
   ],
   "properties": {
     "version": {
@@ -52,6 +53,7 @@
         "inbound": {
           "description": "The protocols this server can receive traffic for.",
           "type": "array",
+          "minItems": 1,
           "items": {
             "enum": [
               "diaspora",
@@ -66,6 +68,7 @@
         "outbound": {
           "description": "The protocols this server can generate traffic for.",
           "type": "array",
+          "minItems": 1,
           "items": {
             "enum": [
               "diaspora",
@@ -82,6 +85,7 @@
     "services": {
       "description": "The third party sites this servers allows to publish messages to.",
       "type": "array",
+      "minItems": 0,
       "items": {
         "enum": [
           "diaspora",
@@ -100,6 +104,9 @@
       "description": "Usage statistics for this server.",
       "type": "object",
       "additionalProperties": false,
+      "required": [
+        "users"
+      ],
       "properties": {
         "users": {
           "description": "statistics about the users of this server.",

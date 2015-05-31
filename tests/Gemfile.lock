@@ -30,3 +30,6 @@ DEPENDENCIES
   json-schema-rspec
   rake
   rspec
+
+BUNDLED WITH
+   1.10.2

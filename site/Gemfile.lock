@@ -151,3 +151,6 @@ DEPENDENCIES
   redcarpet
   semantic-ui-sass
   slim
+
+BUNDLED WITH
+   1.10.2
