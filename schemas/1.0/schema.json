@@ -9,7 +9,8 @@
     "software",
     "protocols",
     "openRegistrations",
-    "usage"
+    "usage",
+    "metadata"
   ],
   "properties": {
     "version": {
@@ -141,6 +142,12 @@
           "minimum": 0
         }
       }
+    },
+    "metadata": {
+      "description": "Free form key value pairs for software specific values. Clients should not rely on any specific key present.",
+      "type": "object",
+      "minProperties": 0,
+      "additionalProperties": true
     }
   }
 }

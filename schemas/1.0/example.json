@@ -18,5 +18,8 @@
     },
     "localPosts": 500,
     "localComments": 1000
+  },
+  "metadata": {
+    "chat_enabled": true
   }
 }
