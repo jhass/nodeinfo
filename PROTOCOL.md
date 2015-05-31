@@ -32,7 +32,7 @@ connection errors or if it can't validate the presented certificate.
 A client should follow redirections by the HTTP protocol.
 
 A client should abandon the discovery on a HTTP response status code of
-404 or 400 and mark the host as not supporting the NodeInfo protocol.
+404 or 400 and may mark the host as not supporting the NodeInfo protocol.
 
 A client should retry discovery on server errors as indicated by the
 HTTP response status code 500.
