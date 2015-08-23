@@ -8,7 +8,10 @@
     "inbound": ["diaspora"],
     "outbound": ["diaspora"]
   },
-  "services": ["facebook", "twitter"],
+  "services": {
+    "inbound": ["gnusocial"],
+    "outbound": ["facebook", "twitter"]
+  },
   "openRegistrations": true,
   "usage": {
     "users": {
