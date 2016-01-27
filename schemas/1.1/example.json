@@ -1,0 +1,30 @@
+{
+  "version": "1.1",
+  "software": {
+    "name": "diaspora",
+    "version": "0.5.0"
+  },
+  "protocols": {
+    "inbound": ["diaspora"],
+    "outbound": ["diaspora"]
+  },
+  "services": {
+    "inbound": ["gnusocial"],
+    "outbound": ["facebook", "twitter"]
+  },
+  "openRegistrations": true,
+  "backupReady": true,
+  "backupLimitReached": false,
+  "usage": {
+    "users": {
+      "total": 123,
+      "activeHalfyear": 42,
+      "activeMonth": 23
+    },
+    "localPosts": 500,
+    "localComments": 1000
+  },
+  "metadata": {
+    "chat_enabled": true
+  }
+}
