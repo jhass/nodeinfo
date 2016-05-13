@@ -1,24 +1,24 @@
-require 'pathname'
-require 'json-schema-rspec'
+require "pathname"
+require "json-schema-rspec"
 
 def base_path
-  Pathname.new(__dir__).join('../..').expand_path
+  Pathname.new(__dir__).join("../..").expand_path
 end
 
 def vendor_path
-  base_path.join 'vendor'
+  base_path.join "vendor"
 end
 
 def schemas_path
-  base_path.join 'schemas'
+  base_path.join "schemas"
 end
 
 def schema_path version
-  schemas_path.join version, 'schema.json'
+  schemas_path.join version, "schema.json"
 end
 
 def example_path version
-  schemas_path.join version, 'example.json'
+  schemas_path.join version, "example.json"
 end
 
 def schema_for version
@@ -43,9 +43,7 @@ RSpec.configure do |config|
 
   config.disable_monkey_patching!
 
-  if config.files_to_run.one?
-    config.default_formatter = 'doc'
-  end
+  config.default_formatter = "doc" if config.files_to_run.one?
 
   config.profile_examples = 10
 
@@ -55,6 +53,9 @@ RSpec.configure do |config|
 
   config.include JSON::SchemaMatchers
 
-  config.json_schemas[:json_schema_draft4] = vendor_path.join('json-schema_draft4_core_validation.json').to_s
-  config.json_schemas[:nodeinfo_10] = schema_path('1.0').to_s
+  config.json_schemas[:json_schema_draft4] = vendor_path.join("json-schema_draft4_core_validation.json").to_s
+
+  Pathname.glob(schemas_path.join("*/schema.json")).each do |path|
+    config.json_schemas[:"nodeinfo_#{path.dirname.basename.to_s.delete(".")}"] = path.to_s
+  end
 end
