@@ -13,9 +13,10 @@ Please see the [protocol definition](PROTOCOL.md).
 
 ## Support
 
-So far plans for integration of this standard exist for the following softwares:
+So far integration of this standard exist for the following softwares:
 
 * [diaspora*](https://diasporafoundation.org)
+* [Friendica](http://friendica.com/)
 
 ## License
 
