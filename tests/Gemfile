@@ -1,5 +1,5 @@
 source "https://rubygems.org"
 
-gem 'rake'
-gem 'rspec'
-gem 'json-schema-rspec'
+gem "rake"
+gem "rspec"
+gem "json-schema-rspec"
