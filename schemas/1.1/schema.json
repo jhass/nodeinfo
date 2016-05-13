@@ -68,7 +68,8 @@
               "pumpio",
               "redmatrix",
               "smtp",
-              "tent"
+              "tent",
+              "zot"
             ]
           }
         },
@@ -87,7 +88,8 @@
               "pumpio",
               "redmatrix",
               "smtp",
-              "tent"
+              "tent",
+              "zot"
             ]
           }
         }
