@@ -36,16 +36,11 @@
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
 
 helpers do
   def active_class target
@@ -57,15 +52,15 @@ helpers do
   end
 end
 
+activate :sprockets
 activate :syntax
-activate :livereload
 
-set :css_dir, 'stylesheets'
-set :js_dir, 'javascripts'
-set :images_dir, 'images'
+set :css_dir, "stylesheets"
+set :js_dir, "javascripts"
+set :images_dir, "images"
 
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
+set :markdown, fenced_code_blocks: true, smartypants: true
 
 # Build-specific configuration
 configure :build do
@@ -85,7 +80,6 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-
 activate :deploy do |deploy|
-  deploy.method = :git
+  deploy.deploy_method = :git
 end

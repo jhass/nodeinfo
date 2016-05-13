@@ -1,4 +1,4 @@
-require 'bundler/setup'
+require "bundler/setup"
 
 task "source/docson" do
   sh "git submodule init"
@@ -6,38 +6,39 @@ task "source/docson" do
 end
 
 directory "source/ns/schema"
-rule(%r{^source/ns/schema/} => [proc{|source| "../schemas/#{source.split('/').last}/schema.json" }, "source/ns/schema"]) do |t|
+rule(%r{^source/ns/schema/} => [
+       proc {|source| "../schemas/#{source.split("/").last}/schema.json" },
+       "source/ns/schema"]) do |t|
   cp t.source, t.name
 end
 
-task :install_schemas => %w(source/ns/schema/1.0)
+task install_schemas: %w(source/ns/schema/1.0)
 
-file "source/protocol.md" => "../PROTOCOL.md" do |t|
+file "source/protocol.html.md" => "../PROTOCOL.md" do |t|
   cp t.source, t.name
 end
 
-file "source/index.md" => "../README.md" do |t|
+file "source/index.html.md" => "../README.md" do |t|
   source = File.read t.source
   source.sub!("PROTOCOL.md", "protocol.html")
   File.write t.name, source
 end
 
-task :prepare => %w(source/index.md source/protocol.md install_schemas source/docson)
-
+task prepare: %w(source/index.html.md source/protocol.html.md install_schemas source/docson)
 
 desc "Build site locally"
-task :build => :prepare do
+task build: :prepare do
   sh "bundle exec middleman build"
 end
 
 desc "Start development server"
-task :serve => :prepare do
+task serve: :prepare do
   sh "bundle exec middleman"
 end
 
 desc "Build and deploy site"
-task :deploy => :build do
+task deploy: :build do
   sh "bundle exec middleman deploy"
 end
 
-task :default => :build
+task default: :build
