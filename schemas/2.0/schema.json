@@ -56,13 +56,12 @@
           "items": {
             "enum": [
               "buddycloud",
+              "dfrn",
               "diaspora",
-              "friendica",
-              "gnusocial",
               "libertree",
               "mediagoblin",
+              "ostatus",
               "pumpio",
-              "redmatrix",
               "smtp",
               "tent",
               "zot"
@@ -76,13 +75,12 @@
           "items": {
             "enum": [
               "buddycloud",
+              "dfrn",
               "diaspora",
-              "friendica",
-              "gnusocial",
               "libertree",
               "mediagoblin",
+              "ostatus",
               "pumpio",
-              "redmatrix",
               "smtp",
               "tent",
               "zot"
