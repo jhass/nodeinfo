@@ -104,7 +104,6 @@
           "minItems": 0,
           "items": {
             "enum": [
-              "appnet",
               "gnusocial",
               "pumpio"
             ]
@@ -116,7 +115,6 @@
           "minItems": 0,
           "items": {
             "enum": [
-              "appnet",
               "blogger",
               "buddycloud",
               "diaspora",
