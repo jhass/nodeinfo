@@ -104,9 +104,11 @@
           "minItems": 0,
           "items": {
             "enum": [
+              "atom1.0",
               "gnusocial",
               "pnut",
-              "pumpio"
+              "pumpio",
+              "rss2.0"
             ]
           }
         },
@@ -116,6 +118,7 @@
           "minItems": 0,
           "items": {
             "enum": [
+              "atom1.0",
               "blogger",
               "buddycloud",
               "diaspora",
@@ -136,6 +139,7 @@
               "posterous",
               "pumpio",
               "redmatrix",
+              "rss2.0",
               "smtp",
               "tent",
               "tumblr",
