@@ -1,4 +1,4 @@
-# NodeInfo protocol 1.1
+# NodeInfo protocol 2.0
 
 ## Definitions
 
@@ -23,6 +23,8 @@ Currently the following relations are known:
   following the NodeInfo schema 1.0.
 * `http://nodeinfo.diaspora.software/ns/schema/1.1`. Referencing a JSON document
   following the NodeInfo schema 1.1.
+* `http://nodeinfo.diaspora.software/ns/schema/2.0`. Referencing a JSON document
+  following the NodeInfo schema 2.0.
 
 A client should first try the HTTPS protocol and fall back to HTTP on
 connection errors or if it can't validate the presented certificate.
@@ -44,15 +46,15 @@ unspecified.
 ### Example
 
 The server at `https://example.org` supporting NodeInfo schema up to version
-1.1 should provide `https://example.org/.well-known/nodeinfo` with the following
+2.0 should provide `https://example.org/.well-known/nodeinfo` with the following
 contents:
 
 ```json
  {
     "links": [
         {
-            "rel": "http://nodeinfo.diaspora.software/ns/schema/1.1",
-            "href": "https://example.org/nodeinfo/1.1"
+            "rel": "http://nodeinfo.diaspora.software/ns/schema/2.0",
+            "href": "https://example.org/nodeinfo/2.0"
         }
     ]
  }
@@ -66,7 +68,7 @@ Accept header to the `application/json` media type.
 
 A server must provide the data at least in this media type. A server should
 set a Content-Type of
-`application/json; profile=http://nodeinfo.diaspora.software/ns/schema/1.1#`,
+`application/json; profile=http://nodeinfo.diaspora.software/ns/schema/2.0#`,
 where the value of profile matches the resolution scope of the NodeInfo
 schema version that's being returned.
 
