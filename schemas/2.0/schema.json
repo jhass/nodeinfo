@@ -31,12 +31,8 @@
       "properties": {
         "name": {
           "description": "The canonical name of this server software.",
-          "enum": [
-            "diaspora",
-            "friendica",
-            "hubzilla",
-            "redmatrix"
-          ]
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
         },
         "version": {
           "description": "The version of this server software.",
