@@ -106,7 +106,9 @@
             "enum": [
               "atom1.0",
               "gnusocial",
+              "imap",
               "pnut",
+              "pop3",
               "pumpio",
               "rss2.0",
               "twitter"
