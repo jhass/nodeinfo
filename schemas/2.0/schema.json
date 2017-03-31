@@ -42,51 +42,21 @@
     },
     "protocols": {
       "description": "The protocols supported on this server.",
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "inbound",
-        "outbound"
-      ],
-      "properties": {
-        "inbound": {
-          "description": "The protocols this server can receive traffic for.",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "enum": [
-              "buddycloud",
-              "dfrn",
-              "diaspora",
-              "libertree",
-              "mediagoblin",
-              "ostatus",
-              "pumpio",
-              "smtp",
-              "tent",
-              "zot"
-            ]
-          }
-        },
-        "outbound": {
-          "description": "The protocols this server can generate traffic for.",
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "enum": [
-              "buddycloud",
-              "dfrn",
-              "diaspora",
-              "libertree",
-              "mediagoblin",
-              "ostatus",
-              "pumpio",
-              "smtp",
-              "tent",
-              "zot"
-            ]
-          }
-        }
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "buddycloud",
+          "dfrn",
+          "diaspora",
+          "libertree",
+          "mediagoblin",
+          "ostatus",
+          "pumpio",
+          "smtp",
+          "tent",
+          "zot"
+        ]
       }
     },
     "services": {
