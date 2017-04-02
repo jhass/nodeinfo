@@ -55,6 +55,7 @@
           "pumpio",
           "smtp",
           "tent",
+          "xmpp",
           "zot"
         ]
       }
