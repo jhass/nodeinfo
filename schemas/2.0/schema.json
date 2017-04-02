@@ -46,6 +46,7 @@
       "minItems": 1,
       "items": {
         "enum": [
+          "activitypub",
           "buddycloud",
           "dfrn",
           "diaspora",
