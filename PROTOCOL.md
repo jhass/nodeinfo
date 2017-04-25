@@ -73,3 +73,74 @@ where the value of profile matches the resolution scope of the NodeInfo
 schema version that's being returned.
 
 A sever may provide additional representations.
+
+## Data contents
+
+Known data element values. Using these will ensure interoperatibility between other nodes using NodeInfo. Please provide additional items that are common in your implementation to these lists via PR's.
+
+### `software.name`
+
+* `diaspora`
+* `friendica`
+* `hubzilla`
+
+### `protocols.inbound.items`
+
+* `buddycloud`
+* `diaspora`
+* `friendica`
+* `gnusocial`
+* `libertree`
+* `mediagoblin`
+* `pumpio`
+* `redmatrix`
+* `smtp`
+* `tent`
+
+### `protocols.outbound.items`
+
+* `buddycloud`
+* `diaspora`
+* `friendica`
+* `gnusocial`
+* `libertree`
+* `mediagoblin`
+* `pumpio`
+* `redmatrix`
+* `smtp`
+* `tent`
+
+### `services.inbound.items`
+
+* `appnet`
+* `gnusocial`
+* `pumpio`
+
+### `services.outbound.items`
+
+* `appnet`
+* `blogger`
+* `buddycloud`
+* `diaspora`
+* `dreamwidth`
+* `drupal`
+* `facebook`
+* `friendica`
+* `gnusocial`
+* `google`
+* `insanejournal`
+* `libertree`
+* `linkedin`
+* `livejournal`
+* `mediagoblin`
+* `myspace`
+* `pinterest`
+* `posterous`
+* `pumpio`
+* `redmatrix`
+* `smtp`
+* `tent`
+* `tumblr`
+* `twitter`
+* `wordpress`
+* `xmpp`
