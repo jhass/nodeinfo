@@ -19,6 +19,7 @@ So far integration of this standard exist for the following softwares:
 * [Friendica](https://friendi.ca)
 * [Hubzilla](https://hubzilla.org)
 * [GangGo](https://ganggo.github.io)
+* [Funkwhale](https://funkwhale.audio)
 
 ## License
 
