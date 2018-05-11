@@ -20,6 +20,7 @@ So far integration of this standard exist for the following softwares:
 * [Hubzilla](https://hubzilla.org)
 * [GangGo](https://ganggo.github.io)
 * [Pleroma](https://pleroma.social)
+* [Funkwhale](https://funkwhale.audio)
 
 ## License
 
