@@ -68,7 +68,7 @@ Accept header to the `application/json` media type.
 
 A server must provide the data at least in this media type. A server should
 set a Content-Type of
-`application/json; profile=http://nodeinfo.diaspora.software/ns/schema/2.0#`,
+`application/json; profile="http://nodeinfo.diaspora.software/ns/schema/2.0#"`,
 where the value of profile matches the resolution scope of the NodeInfo
 schema version that's being returned.
 
