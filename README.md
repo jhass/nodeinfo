@@ -17,10 +17,11 @@ So far integration of this standard exist for the following softwares:
 
 * [diaspora*](https://diasporafoundation.org)
 * [Friendica](https://friendi.ca)
-* [Hubzilla](https://hubzilla.org)
-* [GangGo](https://ganggo.github.io)
-* [Pleroma](https://pleroma.social)
 * [Funkwhale](https://funkwhale.audio)
+* [GangGo](https://ganggo.github.io)
+* [Hubzilla](https://hubzilla.org)
+* [PeerTube](https://joinpeertube.org)
+* [Pleroma](https://pleroma.social)
 * [WordPress](https://wordpress.org/plugins/nodeinfo/)
 
 ## License
