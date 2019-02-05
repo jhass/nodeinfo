@@ -23,6 +23,7 @@ So far integration of this standard exist for the following softwares:
 * [PeerTube](https://joinpeertube.org)
 * [Pleroma](https://pleroma.social)
 * [WordPress](https://wordpress.org/plugins/nodeinfo/)
+* [Misskey](https://misskey.xyz)
 
 ## License
 
