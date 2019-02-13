@@ -22,6 +22,7 @@ So far integration of this standard exist for the following softwares:
 * [Hubzilla](https://hubzilla.org)
 * [Misskey](https://misskey.xyz)
 * [PeerTube](https://joinpeertube.org)
+* [Pixelfed](https://pixelfed.org)
 * [Pleroma](https://pleroma.social)
 * [WordPress](https://wordpress.org/plugins/nodeinfo/)
 
