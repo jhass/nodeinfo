@@ -3,7 +3,8 @@
   "software": {
     "name": "diaspora",
     "version": "0.5.0",
-    "repository": "https://github.com/diaspora/diaspora"
+    "repository": "https://github.com/diaspora/diaspora",
+    "homepage": "https://diasporafoundation.org/"
   },
   "protocols": ["diaspora"],
   "services": {

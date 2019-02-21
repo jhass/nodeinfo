@@ -41,6 +41,10 @@
         "repository": {
           "description": "The url of the source code repository of this server software.",
           "type": "string"
+        },
+        "homepage": {
+          "description": "The url of the homepage of this server software.",
+          "type": "string"
         }
       }
     },
