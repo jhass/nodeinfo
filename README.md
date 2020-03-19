@@ -21,6 +21,7 @@ So far integration of this standard exist for the following softwares:
 * [GangGo](https://ganggo.github.io)
 * [Hubzilla](https://hubzilla.org)
 * [Misskey](https://misskey.xyz)
+* [MoodleNet](https://moodle.net)
 * [PeerTube](https://joinpeertube.org)
 * [Pixelfed](https://pixelfed.org)
 * [Pleroma](https://pleroma.social)
