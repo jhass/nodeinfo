@@ -51,4 +51,7 @@ jobs:
         bundle config set deployment true
         bundle
     - name: Build and deploy
-      run: bundle exec rake deploy
+      run: |
+        git config --global user.email me+ci@jhass.eu
+        git config --global user.name Github Actions
+        bundle exec rake deploy
