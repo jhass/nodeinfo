@@ -82,4 +82,5 @@ end
 
 activate :deploy do |deploy|
   deploy.deploy_method = :git
+  deploy.remote = ENV["GIT_REMOTE"] || "origin"
 end
