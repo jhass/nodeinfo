@@ -54,4 +54,5 @@ jobs:
       run: |
         git config --global user.email me+ci@jhass.eu
         git config --global user.name Github Actions
+        git remote set-url origin "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
         bundle exec rake deploy
