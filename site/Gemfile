@@ -8,5 +8,6 @@ gem "middleman-syntax"
 gem "middleman-sprockets", "~> 4.1"
 gem "slim"
 gem "compass"
-gem "semantic-ui-sass", "2.1.8.0"
+gem "semantic-ui-sass", "2.4.2.0", require: false
 gem "redcarpet"
+gem "sprockets", "< 4"
