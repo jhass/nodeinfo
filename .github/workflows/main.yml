@@ -56,4 +56,4 @@ jobs:
         git config --global user.name Github Actions
         bundle exec rake deploy
       env:
-        GIT_REMOTE: "https://{{github.actor}}:{{github.token}}@github.com/{{github.repository}}.git"
+        GIT_REMOTE: "https://${{github.actor}}:${{github.token}}@github.com/${{github.repository}}.git"
