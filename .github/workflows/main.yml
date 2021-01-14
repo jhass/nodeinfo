@@ -1,0 +1,54 @@
+name: Main
+on:
+  push:
+    branches: [ main ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tests
+    steps:
+    - uses: actions/checkout@v2
+    - id: version
+      run: "echo ::set-output name=RUBY_VERSION::$(cat .ruby-version)"
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ steps.version.outputs.RUBY_VERSION }}
+    - name: Cache bundle
+      uses: actions/cache@v2
+      with:
+        path: tests/vendor/bundle
+        key: ${{ runner.os }}-${{ hashFiles('tests/Gemfile.lock') }}
+    - name: Bundle
+      run: |
+        bundle config set deployment true
+        bundle
+    - name: Run tests
+      run: bundle exec rake
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+    - uses: actions/checkout@v2
+    - id: version
+      run: "echo ::set-output name=RUBY_VERSION::$(cat .ruby-version)"
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ steps.version.outputs.RUBY_VERSION }}
+    - name: Cache bundle
+      uses: actions/cache@v2
+      with:
+        path: site/vendor/bundle
+        key: ${{ runner.os }}-${{ hashFiles('site/Gemfile.lock') }}
+    - name: Bundle
+      run: |
+        bundle config set deployment true
+        bundle
+    - name: Build and deploy
+      run: bundle exec rake deploy
