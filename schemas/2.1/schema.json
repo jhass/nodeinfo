@@ -99,6 +99,7 @@
           "minItems": 0,
           "items": {
             "enum": [
+              "acropolis",
               "atom1.0",
               "blogger",
               "buddycloud",

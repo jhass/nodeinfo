@@ -32,6 +32,7 @@
         "name": {
           "description": "The canonical name of this server software.",
           "enum": [
+            "acropolis",
             "diaspora",
             "friendica",
             "hubzilla",
@@ -122,6 +123,7 @@
           "minItems": 0,
           "items": {
             "enum": [
+              "acropolis",
               "appnet",
               "blogger",
               "buddycloud",
