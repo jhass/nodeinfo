@@ -48,9 +48,9 @@ unspecified.
 ### Example
 
 The server at `https://example.org` supporting NodeInfo schema up to version
-2.0 should provide `https://example.org/.well-known/nodeinfo` with the following
+2.1 should provide `https://example.org/.well-known/nodeinfo` with the following
 contents:
-s
+
 ```json
  {
     "links": [
