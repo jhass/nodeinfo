@@ -74,4 +74,4 @@ set a Content-Type of
 where the value of profile matches the resolution scope of the NodeInfo
 schema version that's being returned.
 
-A sever may provide additional representations.
+A server may provide additional representations.
