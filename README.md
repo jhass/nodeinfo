@@ -39,8 +39,8 @@ CC0.
 
 ## History
 
-NodeInfo emerged from it's predecessor `/statistics.json` that was added
-to the diaspora* software to be able to built a statistics collection and
+NodeInfo emerged from its predecessor `/statistics.json` that was added
+to the diaspora* software to be able to build a statistics collection and
 aggregation service, it was quickly supported by Friendica and RedMatrix.
 As more and more metadata was added and modifications occurred that would
 break backward compatibility, we felt the need to make this a more coordinated
