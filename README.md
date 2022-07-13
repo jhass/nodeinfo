@@ -21,11 +21,13 @@ So far integration of this standard exist for the following softwares:
 * [GangGo](https://ganggo.github.io)
 * [Hubzilla](https://hubzilla.org)
 * [Misskey](https://misskey.xyz)
+* [Mobilizon](https://joinmobilizon.org/)
 * [MoodleNet](https://moodle.net)
 * [PeerTube](https://joinpeertube.org)
 * [Pixelfed](https://pixelfed.org)
 * [Pleroma](https://pleroma.social)
 * [WordPress](https://wordpress.org/plugins/nodeinfo/)
+
 
 ## License
 
