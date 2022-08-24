@@ -20,6 +20,7 @@ So far integration of this standard exist for the following softwares:
 * [Funkwhale](https://funkwhale.audio)
 * [GangGo](https://ganggo.github.io)
 * [Hubzilla](https://hubzilla.org)
+* [Lemmy](https://join-lemmy.org/)
 * [Misskey](https://misskey.xyz)
 * [Mobilizon](https://joinmobilizon.org/)
 * [MoodleNet](https://moodle.net)
