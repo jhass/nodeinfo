@@ -15,6 +15,7 @@ Please see the [protocol definition](PROTOCOL.md).
 
 So far integration of this standard exist for the following softwares:
 
+* [BookWyrm](https://joinbookwyrm.com)
 * [diaspora*](https://diasporafoundation.org)
 * [Friendica](https://friendi.ca)
 * [Funkwhale](https://funkwhale.audio)
