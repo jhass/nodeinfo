@@ -24,7 +24,7 @@ So far integration of this standard exist for the following softwares:
 * [Hubzilla](https://hubzilla.org)
 * [Lemmy](https://join-lemmy.org)
 * [Mastodon](https://joinmastodon.org)
-* [Misskey](https://misskey.xyz)
+* [Misskey](https://misskey-hub.net)
 * [Mobilizon](https://joinmobilizon.org)
 * [MoodleNet](https://moodle.net)
 * [Owncast](https://owncast.online)
