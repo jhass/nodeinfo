@@ -19,6 +19,7 @@ So far integration of this standard exist for the following softwares:
 * [diaspora*](https://diasporafoundation.org)
 * [Friendica](https://friendi.ca)
 * [Funkwhale](https://funkwhale.audio)
+* [Gancio](https://gancio.org)
 * [GangGo](https://ganggo.github.io)
 * [Gitea](https://gitea.io)
 * [Hubzilla](https://hubzilla.org)
