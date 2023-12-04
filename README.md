@@ -34,6 +34,9 @@ So far, integration of this standard exists for the following software:
 * [Pleroma](https://pleroma.social)
 * [WordPress](https://wordpress.org/plugins/nodeinfo/)
 
+## Related projects
+
+* [NodeInfo Metadata Survey](https://codeberg.org/thefederationinfo/nodeinfo_metadata_survey) - A living documentation of the real world usage of the free-form metadata field in the standard.
 
 ## License
 
