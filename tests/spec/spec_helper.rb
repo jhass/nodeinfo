@@ -6,7 +6,7 @@ def base_path
 end
 
 def vendor_path
-  base_path.join "vendor"
+  base_path.join "tests/assets"
 end
 
 def schemas_path
