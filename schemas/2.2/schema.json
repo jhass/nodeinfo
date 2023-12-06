@@ -1,7 +1,8 @@
 {
+  "title": "NodeInfo schema version 2.2",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "http://nodeinfo.diaspora.software/ns/schema/2.1#",
-  "description": "NodeInfo schema version 2.1.",
+  "id": "http://nodeinfo.diaspora.software/ns/schema/2.2#",
+  "description": "NodeInfo is an effort to create a standardized way of exposing metadata about a server running one of the distributed social networks.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -15,9 +16,9 @@
   ],
   "properties": {
     "version": {
-      "description": "The schema version, must be 2.1.",
+      "description": "The schema version, must be 2.2.",
       "enum": [
-        "2.1"
+        "2.2"
       ]
     },
     "software": {
