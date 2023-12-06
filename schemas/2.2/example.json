@@ -1,0 +1,27 @@
+{
+  "version": "2.2",
+  "software": {
+    "name": "diaspora",
+    "version": "0.5.0",
+    "repository": "https://github.com/diaspora/diaspora",
+    "homepage": "https://diasporafoundation.org/"
+  },
+  "protocols": ["diaspora"],
+  "services": {
+    "inbound": ["gnusocial"],
+    "outbound": ["facebook", "twitter"]
+  },
+  "openRegistrations": true,
+  "usage": {
+    "users": {
+      "total": 123,
+      "activeHalfyear": 42,
+      "activeMonth": 23
+    },
+    "localPosts": 500,
+    "localComments": 1000
+  },
+  "metadata": {
+    "chat_enabled": true
+  }
+}
