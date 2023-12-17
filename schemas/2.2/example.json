@@ -26,5 +26,9 @@
   },
   "metadata": {
     "chat_enabled": true
+  },
+  "robots": {
+    "disallow": [],
+    "allow": ["*"]
   }
 }
