@@ -1,7 +1,14 @@
 {
   "version": "2.2",
   "instance": {
-    "name": "New FI𝑓F"
+    "name": "New FI𝑓F",
+    "admins": [{
+      "name": "@Ordnung",
+      "account": "ordnung",
+      "email": "contact@diasp.example"
+    },{
+      "email": "security@diasp.example"
+    }]
   },
   "software": {
     "name": "diaspora",
