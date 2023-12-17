@@ -19,7 +19,8 @@
     "users": {
       "total": 123,
       "activeHalfyear": 42,
-      "activeMonth": 23
+      "activeMonth": 23,
+      "activeWeek": 22
     },
     "localPosts": 500,
     "localComments": 1000
