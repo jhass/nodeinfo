@@ -8,6 +8,7 @@
   "required": [
     "version",
     "instance",
+    "support",
     "software",
     "protocols",
     "services",
@@ -31,6 +32,46 @@
           "description": "If supported by the software the administrator configured name of this instance",
           "type": "string",
           "pattern": "^.{0,500}$"
+        }
+      }
+    },
+    "support": {
+      "description": "Support information of an instance.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contacts": {
+          "description": "Support contacts of an instance.",
+          "type":"array",
+          "items": {
+            "description": "Support contact",
+            "type": "object",
+            "minProperties": 2,
+            "additionalProperties": false,
+            "properties": {
+              "account": {
+                "description": "The account identifier in this instance belonging to the contact.",
+                "type": "string",
+                "pattern": "^.{0,500}$"
+              },
+              "email": {
+                "description": "Email belonging to the contact.",
+                "type": "string",
+                "pattern": "^.{0,500}$"
+              },
+              "role": {
+                "description": "Informal description of what the contact is used for. Common roles are 'admin', 'moderator', 'security'.",
+                "type": "string",
+                "pattern": "^.{0,500}$"
+              }
+            }
+          }
+        },
+        "support_page": {
+          "description": "Specify a affiliated page of the instance to give users help.",
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
         }
       }
     },
