@@ -1,7 +1,8 @@
 {
   "version": "2.2",
   "instance": {
-    "name": "New FI𝑓F"
+    "name": "FI𝑓F fediverse",
+    "description": "Welcome to the FI𝑓F fediverse server"
   },
   "software": {
     "name": "diaspora",
