@@ -183,6 +183,11 @@
               "description": "The amount of users that signed in at least once in the last 30 days.",
               "type": "integer",
               "minimum": 0
+            },
+            "activeWeek": {
+              "description": "The amount of users that signed in at least once in the last 7 days.",
+              "type": "integer",
+              "minimum": 0
             }
           }
         },
