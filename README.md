@@ -33,6 +33,7 @@ So far, integration of this standard exists for the following software:
 * [Pixelfed](https://pixelfed.org)
 * [Pleroma](https://pleroma.social)
 * [WordPress](https://wordpress.org/plugins/nodeinfo/)
+* [WriteFreely](https://writefreely.org/)
 
 ## Related projects
 
