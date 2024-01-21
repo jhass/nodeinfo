@@ -32,6 +32,7 @@ So far, integration of this standard exists for the following software:
 * [PeerTube](https://joinpeertube.org)
 * [Pixelfed](https://pixelfed.org)
 * [Pleroma](https://pleroma.social)
+* [Postmarks](https://postmarks.glitch.me/)
 * [WordPress](https://wordpress.org/plugins/nodeinfo/)
 
 ## Related projects
