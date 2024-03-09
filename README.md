@@ -21,6 +21,7 @@ So far, integration of this standard exists for the following software:
 * [Funkwhale](https://funkwhale.audio)
 * [Gancio](https://gancio.org)
 * [GangGo](https://ganggo.github.io)
+* [Gathio](https://gath.io)
 * [Gitea](https://gitea.io)
 * [Hubzilla](https://hubzilla.org)
 * [Lemmy](https://join-lemmy.org)
@@ -33,7 +34,6 @@ So far, integration of this standard exists for the following software:
 * [Pixelfed](https://pixelfed.org)
 * [Pleroma](https://pleroma.social)
 * [WordPress](https://wordpress.org/plugins/nodeinfo/)
-* [Gathio](https://gath.io)
 
 ## Related projects
 
