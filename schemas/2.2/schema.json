@@ -23,7 +23,7 @@
         "2.2"
       ]
     },
-    "instance":{
+    "instance": {
       "description": "Metadata specific to the instance. An instance is a the concrete installation of a software running on a server.",
       "type": "object",
       "additionalProperties": false,

@@ -6,8 +6,8 @@
   "support": [
     {
       "address": "foo@example.org",
-      "type": "email", // account, website, ...
-      "purpose": "support" // security, abuse, ...
+      "type": "email",
+      "purpose": "support"
     },
     {
       "address": "https://diasp.example/support.html",
