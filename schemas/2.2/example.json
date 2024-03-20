@@ -3,28 +3,18 @@
   "instance": {
     "name": "New FI𝑓F"
   },
-  "support": {
-    "contacts": [
-      {
-        "account": "ordnung",
-        "email": "contact@diasp.example",
-        "role": "admin"
-      },
-      {
-        "email": "security@diasp.example",
-        "role": "security"
-      }
-    ],
-    "pages": [
-      {
-        "url": "https://diasp.example/support.html"
-      },
-      {
-        "url": "https://diasp.example/tos.html",
-        "type": "tos"
-      }
-    ]
-  },
+  "support": [
+    {
+      "address": "foo@example.org",
+      "type": "email", // account, website, ...
+      "purpose": "support" // security, abuse, ...
+    },
+    {
+      "address": "https://diasp.example/support.html",
+      "type": "website",
+      "purpose": "support"
+    }
+  ],
   "software": {
     "name": "diaspora",
     "version": "0.5.0",

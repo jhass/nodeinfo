@@ -36,67 +36,42 @@
       }
     },
     "support": {
-      "description": "Support information of an instance.",
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "contacts": {
-          "description": "Support contacts of an instance. Where a user can initiate contact to.",
-          "type": "array",
-          "items": {
-            "description": "Support contact",
-            "type": "object",
-            "minProperties": 2,
-            "additionalProperties": false,
-            "required": [
-              "role"
-            ],
-            "properties": {
-              "account": {
-                "description": "The account identifier in this instance belonging to the contact.",
-                "type": "string",
-                "pattern": "^.{0,500}$"
-              },
-              "email": {
-                "description": "Email belonging to the contact.",
-                "type": "string",
-                "pattern": "^.{0,500}$"
-              },
-              "role": {
-                "description": "Informal description of what the contact is used for. Common roles are 'admin', 'moderator', 'security'.",
-                "type": "string",
-                "enum": [
-                  "admin",
-                  "security",
-                  "moderator"
-                ]
-              }
-            }
-          }
-        },
-        "pages": {
-          "description": "Suport pages where an instance provide users information from.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "minProperties": 1,
-            "additionalProperties": false,
-            "required": ["url"],
-            "properties": {
-              "url": {
-                "type": "string",
-                "format": "uri",
-                "pattern": "^https?://"
-              },
-              "type": {
-                "type": "string",
-                "enum": [
-                  "tos",
-                  "coc",
-                  "abuse"
-                ]
-              }
-            }
+      "description": "Promote support information",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "address",
+          "type",
+          "purpose"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "address": {
+            "type": "string",
+            "pattern": "^.{0,2000}$"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "email",
+              "account",
+              "website"
+            ]
+          },
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "support",
+              "security",
+              "admin",
+              "abuse",
+              "about",
+              "donation",
+              "code_of_conduct",
+              "terms_of_service",
+              "privacy_policy"
+            ]
           }
         }
       }
