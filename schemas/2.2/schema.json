@@ -48,6 +48,9 @@
             "type": "object",
             "minProperties": 2,
             "additionalProperties": false,
+            "required": [
+              "role"
+            ],
             "properties": {
               "account": {
                 "description": "The account identifier in this instance belonging to the contact.",
