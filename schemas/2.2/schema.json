@@ -41,8 +41,8 @@
       "additionalProperties": false,
       "properties": {
         "contacts": {
-          "description": "Support contacts of an instance.",
-          "type":"array",
+          "description": "Support contacts of an instance. Where a user can initiate contact to.",
+          "type": "array",
           "items": {
             "description": "Support contact",
             "type": "object",
@@ -62,16 +62,39 @@
               "role": {
                 "description": "Informal description of what the contact is used for. Common roles are 'admin', 'moderator', 'security'.",
                 "type": "string",
-                "pattern": "^.{0,500}$"
+                "enum": [
+                  "admin",
+                  "security",
+                  "moderator"
+                ]
               }
             }
           }
         },
-        "support_page": {
-          "description": "Specify a affiliated page of the instance to give users help.",
-          "type": "string",
-          "format": "uri",
-          "pattern": "^https?://"
+        "pages": {
+          "description": "Suport pages where an instance provide users information from.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": false,
+            "required": ["url"],
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "pattern": "^https?://"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "tos",
+                  "coc",
+                  "abuse"
+                ]
+              }
+            }
+          }
         }
       }
     },

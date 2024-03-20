@@ -6,16 +6,24 @@
   "support": {
     "contacts": [
       {
-          "account": "ordnung",
-          "email": "contact@diasp.example",
-          "role": "admin"
+        "account": "ordnung",
+        "email": "contact@diasp.example",
+        "role": "admin"
       },
       {
-          "email": "security@diasp.example",
-          "role": "security"
+        "email": "security@diasp.example",
+        "role": "security"
       }
     ],
-    "support_page": "https://diasp.example/support.html"
+    "pages": [
+      {
+        "url": "https://diasp.example/support.html"
+      },
+      {
+        "url": "https://diasp.example/tos.html",
+        "type": "tos"
+      }
+    ]
   },
   "software": {
     "name": "diaspora",
