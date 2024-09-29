@@ -24,6 +24,7 @@ So far, integration of this standard exists for the following software:
 * [Gitea](https://gitea.io)
 * [Hubzilla](https://hubzilla.org)
 * [Lemmy](https://join-lemmy.org)
+* [Litecord](https://gitlab.com/litecord/litecord)
 * [Mastodon](https://joinmastodon.org)
 * [Misskey](https://misskey-hub.net)
 * [Mobilizon](https://joinmobilizon.org)
