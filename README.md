@@ -23,6 +23,7 @@ So far, integration of this standard exists for the following software:
 * [GangGo](https://ganggo.github.io)
 * [Gitea](https://gitea.io)
 * [Hubzilla](https://hubzilla.org)
+* [/kbin](https://kbin.pub)
 * [Lemmy](https://join-lemmy.org)
 * [Litecord](https://gitlab.com/litecord/litecord)
 * [Mastodon](https://joinmastodon.org)
