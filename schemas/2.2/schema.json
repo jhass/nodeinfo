@@ -74,6 +74,7 @@
       "items": {
         "enum": [
           "activitypub",
+          "atprotocol",
           "buddycloud",
           "dfrn",
           "diaspora",
@@ -200,6 +201,19 @@
           "description": "The amount of comments that were made by users that are registered on this server.",
           "type": "integer",
           "minimum": 0
+        },
+        "records": {
+          "description": "statistics about the records created on this server by collection.",
+          "type": "object",
+          "minProperties": 0,
+          "additionalProperties": { "type": "integer", "minimum": 0 },
+          "properties": {
+            "app.bsky.feed.post": {
+              "description": "The total number of records in the app.bsky.feed.post collection.",
+              "type": "integer",
+              "minimum": 0
+            }
+          }
         }
       }
     },
