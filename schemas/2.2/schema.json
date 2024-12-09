@@ -33,7 +33,7 @@
           "pattern": "^.{0,500}$"
         },
         "description": {
-          "description": "If supported by the software the administrator configured long form description of this instance.",
+          "description": "If supported by the software the administrator configured long form description of this instance. It might be in CommonMark format, HTML must not be rendered.",
           "type": "string",
           "pattern": "^.{0,5000}$"
         }

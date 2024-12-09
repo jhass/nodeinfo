@@ -2,7 +2,7 @@
   "version": "2.2",
   "instance": {
     "name": "FI𝑓F fediverse",
-    "description": "Welcome to the FI𝑓F fediverse server"
+    "description": "Welcome to the [FI𝑓F](https://fiff.de) fediverse server"
   },
   "software": {
     "name": "diaspora",
