@@ -29,10 +29,12 @@ So far, integration of this standard exists for the following software:
 * [Misskey](https://misskey-hub.net)
 * [Mobilizon](https://joinmobilizon.org)
 * [MoodleNet](https://moodle.net)
+* [NeoDB](https://neodb.net)
 * [Owncast](https://owncast.online)
 * [PeerTube](https://joinpeertube.org)
 * [Pixelfed](https://pixelfed.org)
 * [Pleroma](https://pleroma.social)
+* [Takahē](https://jointakahe.org/)
 * [WordPress](https://wordpress.org/plugins/nodeinfo/)
 
 ## Related projects
