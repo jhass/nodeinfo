@@ -1,0 +1,113 @@
+<p align='right'>A <a href="http://www.swisspush.org">swisspush</a> project <a href="http://www.swisspush.org" border=0><img align="top"  src='https://1.gravatar.com/avatar/cf7292487846085732baf808def5685a?s=32'></a></p>
+
+<h1>Docson</h1>
+
+<p>Documentation for your JSON types.</p>
+
+<p>Give Docson a JSON schema and it will generate a <a href="http://lbovet.github.io/docson/index.html#/docson/examples/example.json">beautiful documentation</a>.</p>
+
+<h2>Features</h2>
+
+<ul>
+<li><a href="http://json-schema.org/">JSON schema</a> v4 keywords.</li>
+<li>Runs entirely in the browser.</li>
+<li>Render schema descriptions with markdown</li>
+</ul>
+
+<h2>Installation</h2>
+
+<ul>
+<li>Place the Docson distribution on the web server serving the schemas (to avoid cross-origin issues).</li>
+</ul>
+
+<h2>Usage</h2>
+
+<ul>
+<li>Open <a href="http://lbovet.github.io/docson/index.html">index.html</a> and enter the schema path in the form field.</li>
+<li>Or give the schema path directly as hash parameter: <a href="http://lbovet.github.io/docson/index.html#/docson/examples/example.json">index.html#/docson/examples/example.json</a></li>
+</ul>
+
+<p>Note that you can refer to a sub-schema by adding a json-pointer path as &lsquo;dollar-parameter&rsquo;: <a href="http://lbovet.github.io/docson/index.html#/docson/examples/example.json$items">index.html#/docson/examples/example.json$items</a></p>
+
+<h2>Typson</h2>
+
+<p>You can directly reference your JSON types defined as TypeScript interfaces. If the path ends with <code>.ts</code>, Docson will use <a href="https://github.com/lbovet/typson">Typson</a> to convert the Type Scripts to schema in order to generate the documentation.</p>
+
+<p>For example, <a href="http://lbovet.github.io/docson/index.html#/typson/example/invoice/line.ts$InvoiceLine">index.html#/typson/example/invoice/line.ts$InvoiceLine</a> is the documentation of <a href="https://github.com/lbovet/typson/blob/master/example/invoice/line.ts">line.ts</a>.</p>
+
+<p>You need to install <a href="https://github.com/lbovet/typson">Typson</a> by yourself on your server. It must be in a directory named <code>typson</code> located at the same level as the <code>docson</code> directory.</p>
+
+<h2>Widget</h2>
+
+<p>To include a Docson schema documentations on any page (wiki, &hellip;) without worrying about messing up with javascript libraries and cross-origin issues:</p>
+
+<ul>
+<li>Install Docson somewhere as described above.</li>
+<li>Place the following <code>script</code> tags in the including page, nothing else is needed:</li>
+</ul>
+<div class="highlight"><pre class="highlight plaintext"><code>&lt;script src="http://somewhere/path-to-docson/widget.js" data-schema="/path-to-schema"&gt;
+&lt;/script&gt;
+</code></pre></div>
+<p>See the <a href="http://jsfiddle.net/3kXu2/3/">widget example</a> on jsfiddle.</p>
+
+<h2>Swagger</h2>
+
+<p>You can adapt <a href="https://github.com/wordnik/swagger-ui">Swagger UI</a> to display Docson-generated model documentation instead of the builtin signatures.</p>
+
+<p>See how it looks like in the <a href="http://lbovet.github.io/swagger-ui/dist/index.html">Swagger Docson example</a></p>
+
+<p>In Swagger UI&rsquo;s <code>index.html</code>, include the <a href="https://github.com/lbovet/swagger-ui/blob/3f37722b03db6c48cc2a8460df26dda5f4d6f8e4/src/main/html/index.html#L19">Swagger integration script after other script tags</a>:
+<code>
+  &lt;script src=&#39;/path-to-docson/docson-swagger.js&#39; type=&#39;text/javascript&#39;&gt;&lt;/script&gt;
+</code></p>
+
+<p>Also, you will need a patched version of <a href="https://github.com/lbovet/swagger-js/blob/models-exposed/lib/swagger.js">Swagger Client</a> so that the raw json-schema model is visible from Docson. Either replace the <code>swagger.js</code> file in your Swagger UI disctribution or take it directly from github by replacing</p>
+<div class="highlight"><pre class="highlight plaintext"><code>   &lt;script src='/lib/swagger.js' type='text/javascript'&gt;&lt;/script&gt;
+</code></pre></div>
+<p>with </p>
+<div class="highlight"><pre class="highlight plaintext"><code>  &lt;script src='https://raw2.github.com/lbovet/swagger-js/models-exposed/lib/swagger.js' type='text/javascript'&gt;&lt;/script&gt;
+</code></pre></div>
+<p>For a better layout of parameter models, you may <a href="https://github.com/lbovet/swagger-ui/blob/3f37722b03db6c48cc2a8460df26dda5f4d6f8e4/src/main/html/index.html#L20-L27">want to change the width of some elements</a>:</p>
+<div class="highlight"><pre class="highlight plaintext"><code>  &lt;style&gt;
+      .swagger-ui-wrap {
+          max-width: 1200px;
+      }
+      .swagger-ui-wrap .body-textarea {
+          width: 200px;
+      }
+  &lt;/style&gt;
+</code></pre></div>
+<h2>Integration</h2>
+
+<p>You can also integrate Docson in your application and use its javascript API:</p>
+<div class="highlight"><pre class="highlight javascript"><code><span class="nx">docson</span><span class="p">.</span><span class="nx">doc</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">schema</span><span class="p">,</span> <span class="nx">ref</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><code>element</code> is the element which will host the documentation. Either a DOM element (id or object) or jQuery element.</li>
+<li><code>schema</code> is the URI or path to the schema or a string containing the schema source itself.</li>
+<li><code>ref</code> is an optional json-pointer path to a sub-schema.</li>
+</ul>
+
+<p>Examples:
+* <a href="http://lbovet.github.io/docson/examples/example.html">Simple integration example</a>
+* <a href="http://lbovet.github.io/typson-demo/">See it in action</a> with its buddy <a href="https://github.com/lbovet/typson">typson</a>.</p>
+
+<h2>Limitations</h2>
+
+<ul>
+<li>Mixing unrelated keywords can lead to unexpected results.</li>
+</ul>
+
+<p>Not implemented:
+* Non-primitive values in enums and default values
+* dependencies, additionalItems, patternProperties</p>
+
+<h2>Development</h2>
+
+<ul>
+<li><a href="http://lbovet.github.io/docson/tests/test.html">All tests</a></li>
+</ul>
+
+<p>Please pull-request your failing schemas in the <code>tests/</code> folder and open an issue describing the expected result.</p>
+
+<p><a href="https://bitdeli.com/free" title="Bitdeli Badge"><img src="https://d2weczhvl823v0.cloudfront.net/lbovet/docson/trend.png" alt="Bitdeli Badge" /></a></p>
