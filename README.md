@@ -37,6 +37,7 @@ So far, integration of this standard exists for the following software:
 * [Pleroma](https://pleroma.social)
 * [Takahē](https://jointakahe.org/)
 * [WordPress](https://wordpress.org/plugins/nodeinfo/)
+* [WriteFreely](https://writefreely.org/)
 
 ## Related projects
 
