@@ -8,6 +8,7 @@
   "required": [
     "version",
     "instance",
+    "support",
     "software",
     "protocols",
     "services",
@@ -22,7 +23,7 @@
         "2.2"
       ]
     },
-    "instance":{
+    "instance": {
       "description": "Metadata specific to the instance. An instance is a the concrete installation of a software running on a server.",
       "type": "object",
       "additionalProperties": false,
@@ -36,6 +37,48 @@
           "description": "If supported by the software the administrator configured long form description of this instance.",
           "type": "string",
           "pattern": "^.{0,5000}$"
+        }
+      }
+    },
+    "support": {
+      "description": "Promote support information",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "address",
+          "type",
+          "purpose"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "address": {
+            "type": "string",
+            "pattern": "^.{0,2000}$"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "email",
+              "account",
+              "website"
+            ]
+          },
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "support",
+              "security",
+              "admin",
+              "abuse",
+              "about",
+              "donation",
+              "moderation",
+              "code_of_conduct",
+              "terms_of_service",
+              "privacy_policy"
+            ]
+          }
         }
       }
     },
