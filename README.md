@@ -25,6 +25,7 @@ So far, integration of this standard exists for the following software:
 * [Hubzilla](https://hubzilla.org)
 * [Lemmy](https://join-lemmy.org)
 * [Litecord](https://gitlab.com/litecord/litecord)
+* [Manyfold](https://manyfold.app)
 * [Mastodon](https://joinmastodon.org)
 * [Mbin](https://github.com/MbinOrg/mbin)
 * [Misskey](https://misskey-hub.net)
