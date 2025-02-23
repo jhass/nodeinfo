@@ -208,6 +208,23 @@
       "type": "object",
       "minProperties": 0,
       "additionalProperties": true
+    },
+    "robots": {
+      "description": "Specify what Web Robots are allowed to crawl this info. It follows the http://www.robotstxt.org guidelines.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "allow" :{
+          "description": "Specify bots by user agent, witch are allowed to use this nodeinfo.",
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "disallow" :{
+          "description": "Specify bots by user agent, who are not allowed to use the nodeinfo any future.",
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
     }
   }
 }
